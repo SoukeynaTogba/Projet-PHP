@@ -47,7 +47,7 @@
      <td> <?php echo $data['nom']; ?> </td>
      <td> <?php echo $data['prenom']; ?> </td>
      <td> <?php echo $data['annee']; ?> </td>
-     <td> <?php echo $data['photo']; ?> </td>
+     <td> <?php echo "<img src='img/'".$data['photo'].""?> </td>
     <!-- <td> <?php echo $data['affichage']; ?></td> -->
     <td> <a href="ModifierEleve.php?id=<?php echo $data['id']; ?>">modifier</a> </td>
     <td> <a href="SupprimerEleve.php?id=<?php echo $data['id']; ?>">supprimer</a> </td>
