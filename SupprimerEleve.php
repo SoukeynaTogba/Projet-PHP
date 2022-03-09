@@ -1,3 +1,6 @@
+<?php 
+include("VerifLogin.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

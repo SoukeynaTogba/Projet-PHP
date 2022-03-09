@@ -1,3 +1,7 @@
+<?php 
+include("VerifLogin.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +18,9 @@
 
 <?php include("bandeau.php");
     include("connexionPDO.php"); 
-        $requete = $bdd->prepare ("SELECT * FROM eleves WHERE id= :id");
+        $requete = $bdd->prepare ("SELECT * FROM eleves WHERE id=:id");
         $requete -> execute(array('id' => $_GET['id']));
+       
         $data = $requete -> fetch();
         ?>
 
@@ -39,7 +44,14 @@
 
         <td> <input type="text" name="annee" id="input" value="<?php echo $data['annee']; ?>" > </td>
 
-        <td> <input type="text" name="photo" id="input" value="<?php echo $data['photo']; ?>" > </td>
+        <td> <select  name="photo" id="input" >
+                <?php  $requete2 = $bdd->exec("SELECT * FROM photo");
+                        while ( $data2 = $requete2 -> fetch()) { ?>
+                    
+                <option value="<?php echo $data2['photo']; ?>"> <?php echo $data2['photo']; ?> </option>
+
+                <?php } ?>
+            </select> </td>
 
         <td> <select id="input" name="affichage" >
                 <option value="oui" <?php if ($data['affichage'] == "oui") {  echo "SELECTED"; } ?>> oui</option>
