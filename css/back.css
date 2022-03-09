@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #8271ac;
+}
+
+
+
+nav {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}
+
+/*la div qui contient tout*/
+#formulaire {
+    display: flex;
+    justify-content: center;
+}
+
+.upload {
+    background-color: rgba(201, 94, 94, 0.5);
+    height: 250px;
+    width: 300px;
+    margin-top: 150px;
+    
+    border-radius: 3px;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 150px;
+    width: 300px;
+    margin-top: 150px;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+input {
+    margin: 10px 0px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 3px;
+    outline:none ;
+}
+
+/* style du bouton se connecter*/
+form #sub {
+    background-color:rgb(92, 22, 158) ;
+    margin: 0px 0px;
+    font-family: helvetica;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 20px;
+    box-shadow: 0 5px #8271ac;
+}
+
+form #sub:hover {
+    background-color: white;
+    color: rgb(92, 22, 158) ;
+    cursor: pointer;
+  }
+   
+  form #sub:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px #8271ac;
+  }
+
+
+
